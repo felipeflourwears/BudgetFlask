@@ -17,6 +17,79 @@
             margin-top: 10px;
             margin-left: 10px;
         }
+        .table-container {
+            margin-top: 20px;
+            margin-left: 10px;
+            width: 98%;
+        }
+        .headers-doc{
+            margin-top: 50px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top; /* Alineación vertical */
+            line-height: 1.4; /* Ajuste del espaciado vertical */
+        }
+        th {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        hr {
+            margin-top: 50px;
+            border: none;
+            border-top: 2px solid black;
+            width: 100%;
+        }
+        .total-left{
+             text-align: right;
+        }
+         .grand-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .grand-total table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .grand-total th,
+        .grand-total td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: right;
+        }
+
+        .grand-total th:nth-child(1),
+        .grand-total td:nth-child(1) {
+            width: 200px; /* Ancho fijo para el primer columna (Total mandatory items y Total smart display kits) */
+        }
+
+        .grand-total th:nth-child(2),
+        .grand-total td:nth-child(2) {
+            width: 150px; /* Ancho fijo para el segunda columna ($ 1,404.0) */
+        }
+
+        .grand-total th:nth-child(3),
+        .grand-total td:nth-child(3) {
+            width: 150px; /* Ancho fijo para el tercera columna (Grand Total y $ 4,072.31) */
+        }
+
+        .grand-total th {
+            background-color: black;
+            color: white;
+            text-align: left;
+        }
     </style>
 </head>
 <body>
@@ -27,20 +100,212 @@
             <p><strong>Concept:</strong> Quotation</p>
             <p><strong>Date:</strong> 5/12/2023</p>
         </div>
-        <h1>Generando un PDF con pdfkit</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin urna et pulvinar. Phasellus fringilla turpis a mi mollis malesuada. Morbi commodo est id dolor commodo, non hendrerit odio fermentum. Curabitur tincidunt justo nec aliquam finibus. Integer at ultrices mauris. Nunc vitae tincidunt odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae justo a leo aliquet auctor a in ligula. Nulla facilisi. Vivamus vestibulum fermentum elit at malesuada. Sed dapibus lacus non orci faucibus scelerisque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin urna et pulvinar. Phasellus fringilla turpis a mi mollis malesuada. Morbi commodo est id dolor commodo, non hendrerit odio fermentum. Curabitur tincidunt justo nec aliquam finibus. Integer at ultrices mauris. Nunc vitae tincidunt odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae justo a leo aliquet auctor a in ligula. Nulla facilisi. Vivamus vestibulum fermentum elit at malesuada. Sed dapibus lacus non orci faucibus scelerisque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin urna et pulvinar. Phasellus fringilla turpis a mi mollis malesuada. Morbi commodo est id dolor commodo, non hendrerit odio fermentum. Curabitur tincidunt justo nec aliquam finibus. Integer at ultrices mauris. Nunc vitae tincidunt odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae justo a leo aliquet auctor a in ligula. Nulla facilisi. Vivamus vestibulum fermentum elit at malesuada. Sed dapibus lacus non orci faucibus scelerisque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin urna et pulvinar. Phasellus fringilla turpis a mi mollis malesuada. Morbi commodo est id dolor commodo, non hendrerit odio fermentum. Curabitur tincidunt justo nec aliquam finibus. Integer at ultrices mauris. Nunc vitae tincidunt odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae justo a leo aliquet auctor a in ligula. Nulla facilisi. Vivamus vestibulum fermentum elit at malesuada. Sed dapibus lacus non orci faucibus scelerisque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin urna et pulvinar. Phasellus fringilla turpis a mi mollis malesuada. Morbi commodo est id dolor commodo, non hendrerit odio fermentum. Curabitur tincidunt justo nec aliquam finibus. Integer at ultrices mauris. Nunc vitae tincidunt odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae justo a leo aliquet auctor a in ligula. Nulla facilisi. Vivamus vestibulum fermentum elit at malesuada. Sed dapibus lacus non orci faucibus scelerisque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin urna et pulvinar. Phasellus fringilla turpis a mi mollis malesuada. Morbi commodo est id dolor commodo, non hendrerit odio fermentum. Curabitur tincidunt justo nec aliquam finibus. Integer at ultrices mauris. Nunc vitae tincidunt odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae justo a leo aliquet auctor a in ligula. Nulla facilisi. Vivamus vestibulum fermentum elit at malesuada. Sed dapibus lacus non orci faucibus scelerisque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin urna et pulvinar. Phasellus fringilla turpis a mi mollis malesuada. Morbi commodo est id dolor commodo, non hendrerit odio fermentum. Curabitur tincidunt justo nec aliquam finibus. Integer at ultrices mauris. Nunc vitae tincidunt odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae justo a leo aliquet auctor a in ligula. Nulla facilisi. Vivamus vestibulum fermentum elit at malesuada. Sed dapibus lacus non orci faucibus scelerisque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin urna et pulvinar. Phasellus fringilla turpis a mi mollis malesuada. Morbi commodo est id dolor commodo, non hendrerit odio fermentum. Curabitur tincidunt justo nec aliquam finibus. Integer at ultrices mauris. Nunc vitae tincidunt odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae justo a leo aliquet auctor a in ligula. Nulla facilisi. Vivamus vestibulum fermentum elit at malesuada. Sed dapibus lacus non orci faucibus scelerisque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin urna et pulvinar. Phasellus fringilla turpis a mi mollis malesuada. Morbi commodo est id dolor commodo, non hendrerit odio fermentum. Curabitur tincidunt justo nec aliquam finibus. Integer at ultrices mauris. Nunc vitae tincidunt odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae justo a leo aliquet auctor a in ligula. Nulla facilisi. Vivamus vestibulum fermentum elit at malesuada. Sed dapibus lacus non orci faucibus scelerisque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin urna et pulvinar. Phasellus fringilla turpis a mi mollis malesuada. Morbi commodo est id dolor commodo, non hendrerit odio fermentum. Curabitur tincidunt justo nec aliquam finibus. Integer at ultrices mauris. Nunc vitae tincidunt odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae justo a leo aliquet auctor a in ligula. Nulla facilisi. Vivamus vestibulum fermentum elit at malesuada. Sed dapibus lacus non orci faucibus scelerisque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin urna et pulvinar. Phasellus fringilla turpis a mi mollis malesuada. Morbi commodo est id dolor commodo, non hendrerit odio fermentum. Curabitur tincidunt justo nec aliquam finibus. Integer at ultrices mauris. Nunc vitae tincidunt odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae justo a leo aliquet auctor a in ligula. Nulla facilisi. Vivamus vestibulum fermentum elit at malesuada. Sed dapibus lacus non orci faucibus scelerisque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin urna et pulvinar. Phasellus fringilla turpis a mi mollis malesuada. Morbi commodo est id dolor commodo, non hendrerit odio fermentum. Curabitur tincidunt justo nec aliquam finibus. Integer at ultrices mauris. Nunc vitae tincidunt odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae justo a leo aliquet auctor a in ligula. Nulla facilisi. Vivamus vestibulum fermentum elit at malesuada. Sed dapibus lacus non orci faucibus scelerisque.</p>
     </header>
-    <p>Aquí puedes agregar más contenido para tu PDF.</p>
+    <div class="table-container">
+        <h2 class="headers-doc">Mandatory items: </h2>
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Cost</th>
+            </tr>
+            <tr>
+                <td>Video processor + 4G card</td>
+                <td class="total-left">$ 377.99</td>
+            </tr>
+            <tr>
+                <td>Freight + import taxes</td>
+                <td class="total-left">$ 487.20</td>
+            </tr>
+            <tr>
+                <td>Installation</td>
+                <td class="total-left">$ 931.02</td>
+            </tr>
+            <tr>
+                <td>CMS annual fee</td>
+                <td class="total-left">$ 152.10</td>
+            </tr>
+            <tr>
+                <td>NOC + cell data annual fee</td>
+                <td class="total-left">$ 152.10</td>
+            </tr>
+            <tr>
+                <td><strong>Total</strong></td>
+                <td class="total-left"><strong>$ 2,668.31</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Mandatory items: 1</strong></td>
+                <td class="total-left"><strong>$ 2,668.31</strong></td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <h2 class="headers-doc">Smart Display Kit: </h2>
+    <hr>
+    <div class="table-container">
+        <h3 class="">Option 1: </h3>
+        <table>
+            <tr>
+                <th>Quantity</th>
+                <th>Type</th>
+                <th>Size</th>
+                <th>Price per item</th>
+                <th> Total price per item</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Header</td>
+                <td>Pitch 2</td>
+                <td>$ 848.90</td>
+                <td class="total-left">$ 848.90</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Header</td>
+                <td>Pitch 2</td>
+                <td>$ 848.90</td>
+                <td class="total-left">$ 848.90</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Shelf</td>
+                <td>Pitch 2</td>
+                <td>$ 848.90</td>
+                <td class="total-left">$ 848.90</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Shelf</td>
+                <td>Pitch 2</td>
+                <td>$ 848.90</td>
+                <td class="total-left">$ 848.90</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Shelf</td>
+                <td>Pitch 2</td>
+                <td>$ 848.90</td>
+                <td class="total-left">$ 848.90</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Shelf</td>
+                <td>Pitch 2</td>
+                <td>$ 848.90</td>
+                <td class="total-left">$ 848.90</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Shelf</td>
+                <td>Pitch 2</td>
+                <td>$ 848.90</td>
+                <td class="total-left">$ 848.90</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Shelf</td>
+                <td>Pitch 2</td>
+                <td>$ 848.90</td>
+                <td class="total-left">$ 848.90</td>
+            </tr>
+            <tr>
+                <td><strong>Smart Display</strong></td>
+                <td class="total-left" colspan="4"><strong>5</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Headers Total</strong></td>
+                <td class="total-left" colspan="4"><strong>$15,000</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Shelfs Total</strong></td>
+                <td class="total-left" colspan="4"><strong>$15,000</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Total Option 1</strong></td>
+                <td class="total-left" colspan="4"><strong>$30,000</strong></td>
+            </tr>
+        </table>
+
+        <h3 class="">Option 2: </h3>
+        <table>
+            <tr>
+                <th>Quantity</th>
+                <th>Type</th>
+                <th>Size</th>
+                <th>Price per item</th>
+                <th> Total price per item</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Header</td>
+                <td>Pitch 2</td>
+                <td>$ 848.90</td>
+                <td class="total-left">$ 848.90</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Header</td>
+                <td>Pitch 2</td>
+                <td>$ 848.90</td>
+                <td class="total-left">$ 848.90</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Shelf</td>
+                <td>Pitch 2</td>
+                <td>$ 848.90</td>
+                <td class="total-left">$ 848.90</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Shelf</td>
+                <td>Pitch 2</td>
+                <td>$ 848.90</td>
+                <td class="total-left">$ 848.90</td>
+            </tr>
+            <tr>
+                <td><strong>Smart Display</strong></td>
+                <td class="total-left" colspan="4"><strong>5</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Headers Total</strong></td>
+                <td class="total-left" colspan="4"><strong>$15,000</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Shelfs Total</strong></td>
+                <td class="total-left" colspan="4"><strong>$15,000</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Total Option 2</strong></td>
+                <td class="total-left" colspan="4"><strong>$30,000</strong></td>
+            </tr>
+        </table>
+        <hr>
+        <br>
+            <div class="grand-total">
+                <table>
+                    <tr>
+                        <th>Total mandatory items:</th>
+                        <td>$ 1,404.0</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="grand-total">
+                <table>
+                    <tr>
+                        <th>Total smart display kits:</th>
+                        <td>$ 1,404.0</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="grand-total">
+                <table>
+                    <tr>
+                        <th>Grand Total:</th>
+                        <td>$ 4,072.31</td>
+                    </tr>
+                </table>
+            </div>
+        <hr>
+    </div>
 </body>
 </html>
