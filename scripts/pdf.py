@@ -110,6 +110,9 @@ html_content = f"""
             color: white;
             text-align: left;
         }}
+        .feauture-total {{
+             font-size: 20px;
+        }}
     </style>
 </head>
 <body>
@@ -304,24 +307,24 @@ html_content = f"""
             <div class="grand-total">
                 <table>
                     <tr>
-                        <th>Total mandatory items:</th>
-                        <td>$ 1,404.0</td>
+                        <th class="feauture-total">Total mandatory items:</th>
+                        <td class="feauture-total"><strong>$ 1,404.0</strong></td>
                     </tr>
                 </table>
             </div>
             <div class="grand-total">
                 <table>
                     <tr>
-                        <th>Total smart display kits:</th>
-                        <td>$ 1,404.0</td>
+                        <th class="feauture-total">Total smart display kits:</th>
+                        <td class="feauture-total"><strong>$ 1,404.0</strong></td>
                     </tr>
                 </table>
             </div>
             <div class="grand-total">
                 <table>
                     <tr>
-                        <th>Grand Total:</th>
-                        <td>$ 4,072.31</td>
+                        <th class="feauture-total">Grand Total:</th>
+                        <td class="feauture-total"><strong>$ 4,072.31</strong></td>
                     </tr>
                 </table>
             </div>
