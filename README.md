@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 ## Access to server
 ```bash
-ssh -i .\key.pem ubuntu@IP
+ssh -i .\key.pem ubuntu@44.209.162.29
 ssh -i llave.pem ubuntu@IP -l root
 sudo su -
 ```
@@ -119,3 +119,30 @@ nano ~/.bashrc
 export PATH="$HOME/.local/bin:$PATH"
 
 source ~/.bashrc
+
+
+```bash
+# Asegúrate de estar dentro del entorno virtual
+ubuntu@ip-172-31-44-230:/var/www/webApp$ pipenv shell
+
+# Dentro del entorno virtual, verifica las dependencias instaladas
+(webApp) ubuntu@ip-172-31-44-230:/var/www/webApp$ pip list
+
+
+activate_this = '/home/ubuntu/.local/share/virtualenvs/webApp-c1qRIGue/bin/activate_this.py'
+
+# Ejecuta activate_this.py para activar el entorno virtual
+with open(activate_this) as file_:
+    exec(file_.read(), dict(__file__=activate_this))
+
+# Agrega la ruta del proyecto al sistema
+project_dir = '/var/www/webApp'
+if project_dir not in sys.path:
+    sys.path.append(project_dir)
+
+# Importa tu aplicación Flask después de activar el entorno virtual
+from app import app as application
+
+
+
+```
