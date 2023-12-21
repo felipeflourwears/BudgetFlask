@@ -63,3 +63,4 @@ sudo systemctl stop apache2
 https://wkhtmltopdf.org/downloads.html
 
 ruta = os.path.join(os.path.dirname(__file__), "csv_vacio.csv")
+pip install pipenv
